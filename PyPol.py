@@ -56,37 +56,52 @@ with open(electioncsv, newline='') as election_data:
         #Increment Candidate Vote Count
         candidate_votes[candidate_name] += 1
 
-#Headers
-print("\n\nElection Results\n________________\n")
+#Open file to save Election Results
+with open(electionresults, "w") as txt_file:
 
-# 3. Percentage breakdown of votes for each Candidate
-for candidate in candidate_votes:
-    #Retrieve vote count
-    votes = candidate_votes[candidate]
-    #Calculate Percentages
-    vote_percentage = int(votes) / int(total_votes) * 100
-
-    #figure out the Winner
-    #Is current candidate the Winner?
-    if (votes > winning_count) and (vote_percentage > winning_percentage):
-        #Set current candidate as winner and store data
-        winning_count = votes
-        winning_percentage = vote_percentage
-        winning_candidate = candidate
-
-    #Print Vote Percentages
-    # print(f"{candidate}: received {vote_percentage:.1f} % of the vote")
-    
-    print(f"{candidate}: {vote_percentage:.1f}% ({votes:,})\n")
-
-# 5. Winner of election based on Popular Vote (Most Votes)
-winning_candidate_summary = (
+    #Headers
+    election_results = (
+    f"\nElection Results\n"
     f"-------------------------\n"
-    f"Winner: {winning_candidate}\n"
-    f"Winning Vote Count: {winning_count:,}\n"
-    f"Winning Percentage: {winning_percentage:.1f}%\n"
+    f"Total Votes: {total_votes:,}\n"
     f"-------------------------\n")
-print(winning_candidate_summary)
+    print(election_results, end="")
+    # Save the final vote count to the text file.
+    txt_file.write(election_results)
+
+
+    # 3. Percentage breakdown of votes for each Candidate
+    for candidate in candidate_votes:
+        #Retrieve vote count
+        votes = candidate_votes[candidate]
+        #Calculate Percentages
+        vote_percentage = int(votes) / int(total_votes) * 100
+
+        #figure out the Winner
+        #Is current candidate the Winner?
+        if (votes > winning_count) and (vote_percentage > winning_percentage):
+            #Set current candidate as winner and store data
+            winning_count = votes
+            winning_percentage = vote_percentage
+            winning_candidate = candidate
+
+        #Print Vote Percentages
+        # print(f"{candidate}: received {vote_percentage:.1f} % of the vote")
+        # print(f"{candidate}: {vote_percentage:.1f}% ({votes:,})\n")
+        candidate_results = (f"{candidate}: {vote_percentage:.1f}% ({votes:,})\n")
+        print(candidate_results)
+        txt_file.write(candidate_results)
+
+
+    # 5. Winner of election based on Popular Vote (Most Votes)
+    winning_candidate_summary = (
+        f"-------------------------\n"
+        f"Winner: {winning_candidate}\n"
+        f"Winning Vote Count: {winning_count:,}\n"
+        f"Winning Percentage: {winning_percentage:.1f}%\n"
+        f"-------------------------\n")
+    print(winning_candidate_summary)
+    txt_file.write(winning_candidate_summary)
 
 
 
