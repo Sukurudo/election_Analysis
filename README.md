@@ -18,6 +18,7 @@ A Colorado Board of Elections employee has requested the following tasks to comp
 ## Summary
 
 The Analysis of the election show that: (Output in election_analysis.txt)
+
 Total Votes Cast: 369,711
 
 Candidates:</br>
