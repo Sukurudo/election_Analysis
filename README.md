@@ -11,10 +11,12 @@ A Colorado Board of Elections employee has requested the following tasks to comp
 5. Determine the winner of the election based on popular vote.
 
 ## Resources
+
 -Data Source: election_results.csv (provided by client)
 -Software: Python 3.6.1, Visual Studio Code, 1.38.1 (Mac)
 
 ## Summary
+
 The Analysis of the election show that: (Output in election_analysis.txt)
 Total Votes Cast: 369,711
 -------------------------
