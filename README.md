@@ -19,20 +19,20 @@ A Colorado Board of Elections employee has requested the following tasks to comp
 
 The Analysis of the election show that: (Output in election_analysis.txt)
 Total Votes Cast: 369,711
--------------------------
-Candidates:
-Charles Casper Stockham
-Diana DeGette
-Raymon Anthony Doane
--------------------------
-Charles Casper Stockham received 23.0% of the vote with 85,213 total votes
-Diana DeGette received 73.8% of the vote with 272,892 total votes
-Raymon Anthony Doane received 3.1% of the vote with 11,606 total votes
--------------------------
-Winner: Diana DeGette
-Winning Vote Count: 272,892
-Winning Percentage: 73.8%
--------------------------
+
+Candidates:</br>
+Charles Casper Stockham</br>
+Diana DeGette</br>
+Raymon Anthony Doane</br>
+
+***Charles Casper Stockham*** received 23.0% of the vote with 85,213 total votes</br>
+***Diana DeGette received*** 73.8% of the vote with 272,892 total votes</br>
+***Raymon Anthony Doane*** received 3.1% of the vote with 11,606 total votes</br>
+
+**Winner: Diana DeGette</br>
+Winning Vote Count: 272,892</br>
+Winning Percentage: 73.8%</br>**
+
 
 ## Challenge Overview
 
